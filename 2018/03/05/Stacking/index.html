@@ -111,13 +111,13 @@
 <meta property="og:site_name" content="FlyEgle">
 <meta property="og:description" content="Stacking Stacking在机器学习中是一种常用的集成方法，网上有很多的基础教程。我在这里就不说太多了，按照惯例先开始放一个图。这张图刚一开始看可能看到云里雾里的, 如果一开始看不懂，后面的代码也就不会懂了。下面开始简单的介绍Stacking。  简单概述 1.原始的数据集是Data, 按照一定的比例划分为Train和Test。可以用sklearn.model_selection.KFo">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:image" content="http://flyegle.com/2018/03/05/Stacking/image/eagle.jpg">
-<meta property="og:image" content="http://flyegle.com/2018/03/05/Stacking/image/stacking.jpg">
-<meta property="og:updated_time" content="2018-03-05T06:47:11.700Z">
+<meta property="og:image" content="http://flyegle.com/images/eagle.jpg">
+<meta property="og:image" content="http://flyegle.com/images/stacking.jpg">
+<meta property="og:updated_time" content="2018-03-05T06:54:47.992Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="集成学习Stacking实现">
 <meta name="twitter:description" content="Stacking Stacking在机器学习中是一种常用的集成方法，网上有很多的基础教程。我在这里就不说太多了，按照惯例先开始放一个图。这张图刚一开始看可能看到云里雾里的, 如果一开始看不懂，后面的代码也就不会懂了。下面开始简单的介绍Stacking。  简单概述 1.原始的数据集是Data, 按照一定的比例划分为Train和Test。可以用sklearn.model_selection.KFo">
-<meta name="twitter:image" content="http://flyegle.com/2018/03/05/Stacking/image/eagle.jpg">
+<meta name="twitter:image" content="http://flyegle.com/images/eagle.jpg">
 
 
 
@@ -334,9 +334,9 @@
       
 
       
-        <p><img src="image/eagle.jpg" alt="Pic"></p>
+        <p><img src="/images/eagle.jpg" alt="pic"></p>
 <h1 id="Stacking"><a href="#Stacking" class="headerlink" title="Stacking"></a>Stacking</h1><blockquote>
-<font face="Monaco" color="000000" size="3">Stacking在机器学习中是一种常用的集成方法，网上有很多的基础教程。我在这里就不说太多了，按照惯例先开始放一个图。<br><br><img src="image/stacking.jpg" alt="1"><br><br>这张图刚一开始看可能看到云里雾里的, 如果一开始看不懂，后面的代码也就不会懂了。下面开始简单的介绍Stacking。</font>
+<font face="Monaco" color="000000" size="3">Stacking在机器学习中是一种常用的集成方法，网上有很多的基础教程。我在这里就不说太多了，按照惯例先开始放一个图。<br><br><img src="/images/stacking.jpg" alt="1"><br><br>这张图刚一开始看可能看到云里雾里的, 如果一开始看不懂，后面的代码也就不会懂了。下面开始简单的介绍Stacking。</font>
 </blockquote>
 <h1 id="简单概述"><a href="#简单概述" class="headerlink" title="简单概述"></a>简单概述</h1><blockquote>
 <font face="Monaco" color="000000" size="3">1.原始的数据集是Data, 按照一定的比例划分为Train和Test。可以用<code>sklearn.model_selection.KFold</code>或者<code>sklearn.model_selection.train_test_split</code>来分割。<br><br>2.Training Datas用KFold来做交叉验证，减少模型的过拟合程度。在这里，模型的预测分成两部分：<br><code>第一部分是model-&gt;Training</code><br><code>第二部分是model-&gt;Testing</code><br><br>对于第一部分来说每一折验证会产生一个子模型，预测得到的结果是总体数据的1/k所以，k折以后得到的predict要加起来变成一列新的训练数据就是New feature。<br><br>对于第二部分来说每一个子模型对Test Data做predict，得到的结果最后做一个mean处理，得到一列新的测试数据就是Predictions。<br><br>3.训练的数据和测试的数据有了，下面就是要把新的数据放入新的模型中进行预测了，得到的就是想要的predict！！<br></font>
