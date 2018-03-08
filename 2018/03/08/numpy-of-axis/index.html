@@ -100,27 +100,30 @@
 
 
   
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Python numpy," />
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="description" content="Numpy axis简单解释 在学习python中经常会用到numpy这个科学库，它是用C语言编写的所以对于矩阵的计算速度远远快于python自己的计算方法。这里对于Numpy的安装和介绍就不再提示了，重点说明一下自己对于axis轴的理解。    图中的矩阵是一个shape=(3, 5)的numpy.array， 这里不按照是行还是列的说法。而是按照ndims来说，就是第一个维度和第二个维度。按照">
+<meta name="keywords" content="Python numpy">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://flyegle.com/2018/03/03/hello-world/index.html">
+<meta property="og:title" content="numpy of axis">
+<meta property="og:url" content="http://flyegle.com/2018/03/08/numpy-of-axis/index.html">
 <meta property="og:site_name" content="FlyEgle">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="Numpy axis简单解释 在学习python中经常会用到numpy这个科学库，它是用C语言编写的所以对于矩阵的计算速度远远快于python自己的计算方法。这里对于Numpy的安装和介绍就不再提示了，重点说明一下自己对于axis轴的理解。    图中的矩阵是一个shape=(3, 5)的numpy.array， 这里不按照是行还是列的说法。而是按照ndims来说，就是第一个维度和第二个维度。按照">
 <meta property="og:locale" content="zh-hans">
-<meta property="og:updated_time" content="2018-03-03T12:05:21.137Z">
+<meta property="og:image" content="http://flyegle.com/2018/03/08/numpy-of-axis/images/axis.jpg">
+<meta property="og:updated_time" content="2018-03-08T07:13:08.402Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="numpy of axis">
+<meta name="twitter:description" content="Numpy axis简单解释 在学习python中经常会用到numpy这个科学库，它是用C语言编写的所以对于矩阵的计算速度远远快于python自己的计算方法。这里对于Numpy的安装和介绍就不再提示了，重点说明一下自己对于axis轴的理解。    图中的矩阵是一个shape=(3, 5)的numpy.array， 这里不按照是行还是列的说法。而是按照ndims来说，就是第一个维度和第二个维度。按照">
+<meta name="twitter:image" content="http://flyegle.com/2018/03/08/numpy-of-axis/images/axis.jpg">
 
 
 
 
 
 
-  <link rel="canonical" href="http://flyegle.com/2018/03/03/hello-world/"/>
+  <link rel="canonical" href="http://flyegle.com/2018/03/08/numpy-of-axis/"/>
 
 
 
@@ -129,7 +132,7 @@
     sidebar: "",
   };
 </script>
-  <title>Hello World | FlyEgle</title>
+  <title>numpy of axis | FlyEgle</title>
   
 
 
@@ -300,7 +303,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://flyegle.com/2018/03/03/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://flyegle.com/2018/03/08/numpy-of-axis/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="MC Jiang">
@@ -317,7 +320,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hello World</h1>
+          <h1 class="post-title" itemprop="name headline">numpy of axis</h1>
         
 
         <div class="post-meta">
@@ -329,7 +332,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-03T20:05:21+08:00">2018-03-03</time>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-08T14:29:16+08:00">2018-03-08</time>
             
 
             
@@ -366,15 +369,38 @@
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <h1 id="Numpy-axis简单解释"><a href="#Numpy-axis简单解释" class="headerlink" title="Numpy axis简单解释"></a><p align="center">Numpy axis简单解释</p></h1><blockquote>
+<p>在学习python中经常会用到numpy这个科学库，它是用C语言编写的所以对于矩阵的计算速度远远快于python自己的计算方法。这里对于Numpy的安装和介绍就不再提示了，重点说明一下自己对于axis轴的理解。</p>
+</blockquote>
+<p></p><p align="center"><img src="images/axis.jpg" alt="axis"></p>
+<blockquote>
+<p>图中的矩阵是一个shape=(3, 5)的numpy.array， 这里不按照是行还是列的说法。而是按照ndims来说，就是第一个维度和第二个维度。按照索引的顺序，axis=0代表的就是第一个维度的方向，axis=1就是代表第二个维度的方向，依次往下类推。 </p>
+</blockquote>
+<blockquote>
+<p>一个简单的二维数组</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">import numpy as np</span><br><span class="line">arr  = np.random.random((3, 5))</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt;print(arr.shape)</span><br><span class="line">(3, 5)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>数组的维度</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt;print(arr.ndim)</span><br><span class="line">2</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>数组求和</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sum_0 = np.sum(arr, axis=0)</span><br><span class="line">sum_1 = np.sum(arr, axis=1)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>按照上面的图表示，当axis=0的时候求和的结果是按照row的方向来求和，也就是说是每一列的求和。当axis=1的时候求和的结果就是按照col的方向来求和， 也就是说是每一行的求和。看下面的结果</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">import numpy as np</span><br><span class="line"></span><br><span class="line">array = np.random.random((3, 5))</span><br><span class="line"></span><br><span class="line">print(np.sum(array, axis=0))  </span><br><span class="line">print(np.sum(array, axis=1))  </span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt;[1.61948631 1.11130637 1.66794932 1.20041938 1.24456878]</span><br><span class="line">&gt;&gt;&gt;[1.97046523 3.43930555 1.43395938]</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>三维数组</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">array_3 = np.random.randint(0, 5, [2, 3, 2])</span><br><span class="line"></span><br><span class="line">print(np.sum(array_3, axis=0).shape)  </span><br><span class="line">print(np.sum(array_3, axis=1).shape)  </span><br><span class="line">print(np.sum(array_3, axis=2).shape)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>三维数组的三个维度，axis=0输出的就是剩下两个维度的结果。同理一样</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt;(3, 2)</span><br><span class="line">&gt;&gt;&gt;(2, 2)</span><br><span class="line">&gt;&gt;&gt;(2, 3)</span><br></pre></td></tr></table></figure>
+<p>axis的分析并不难，只是不是通常所记忆的索引问题，所以每次用axis的时候一定要想一想上面的那个图。记住0和1的方向指引，熟能生巧。</p>
 
       
     </div>
@@ -393,6 +419,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/Python-numpy/" rel="tag"># Python numpy</a>
+          
+        </div>
+      
 
       
       
@@ -402,15 +434,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/03/05/Stacking/" rel="next" title="集成学习Stacking实现">
+                <i class="fa fa-chevron-left"></i> 集成学习Stacking实现
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/03/03/first/" rel="prev" title="first">
-                first <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -548,7 +580,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Numpy-axis简单解释"><span class="nav-number">1.</span> <span class="nav-text">Numpy axis简单解释</span></a></li></ol></div>
             
 
           </div>

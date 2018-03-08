@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next pisces use-motion" lang="zh-cn">
+<html class="theme-next muse use-motion" lang="zh-hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -75,7 +75,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Pisces',
+    scheme: 'Muse',
     version: '6.0.5',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: false,
@@ -109,7 +109,7 @@
 <meta property="og:url" content="http://flyegle.com/index.html">
 <meta property="og:site_name" content="FlyEgle">
 <meta property="og:description" content="人生苦短，python当歌">
-<meta property="og:locale" content="zh-cn">
+<meta property="og:locale" content="zh-hans">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="FlyEgle">
 <meta name="twitter:description" content="人生苦短，python当歌">
@@ -168,7 +168,7 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-cn">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-hans">
 
   
   
@@ -218,9 +218,45 @@
         </li>
       
         
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            <i class="menu-item-icon fa fa-fw fa-user"></i> <br />About</a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />Tags</a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            <i class="menu-item-icon fa fa-fw fa-th"></i> <br />Categories</a>
+        </li>
+      
+        
         <li class="menu-item menu-item-archives">
           <a href="/archives/" rel="section">
-            <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />Archives</a>
+            <i class="menu-item-icon fa fa-fw fa-archives"></i> <br />Archives</a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-schedule">
+          <a href="/schedule/" rel="section">
+            <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br />Schedule</a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-sitemap">
+          <a href="/sitemap.xml" rel="section">
+            <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br />Sitemap</a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404/" rel="section">
+            <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />Commonweal 404</a>
         </li>
       
 
@@ -248,6 +284,161 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://flyegle.com/2018/03/08/numpy-of-axis/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="MC Jiang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="FlyEgle">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/03/08/numpy-of-axis/" itemprop="url">numpy of axis</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-08T14:29:16+08:00">2018-03-08</time>
+            
+
+            
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Numpy-axis简单解释"><a href="#Numpy-axis简单解释" class="headerlink" title="Numpy axis简单解释"></a><p align="center">Numpy axis简单解释</p></h1><blockquote>
+<p>在学习python中经常会用到numpy这个科学库，它是用C语言编写的所以对于矩阵的计算速度远远快于python自己的计算方法。这里对于Numpy的安装和介绍就不再提示了，重点说明一下自己对于axis轴的理解。</p>
+</blockquote>
+<p></p><p align="center"><img src="images/axis.jpg" alt="axis"></p>
+<blockquote>
+<p>图中的矩阵是一个shape=(3, 5)的numpy.array， 这里不按照是行还是列的说法。而是按照ndims来说，就是第一个维度和第二个维度。按照索引的顺序，axis=0代表的就是第一个维度的方向，axis=1就是代表第二个维度的方向，依次往下类推。 </p>
+</blockquote>
+<blockquote>
+<p>一个简单的二维数组</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">import numpy as np</span><br><span class="line">arr  = np.random.random((3, 5))</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt;print(arr.shape)</span><br><span class="line">(3, 5)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>数组的维度</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt;print(arr.ndim)</span><br><span class="line">2</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>数组求和</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sum_0 = np.sum(arr, axis=0)</span><br><span class="line">sum_1 = np.sum(arr, axis=1)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>按照上面的图表示，当axis=0的时候求和的结果是按照row的方向来求和，也就是说是每一列的求和。当axis=1的时候求和的结果就是按照col的方向来求和， 也就是说是每一行的求和。看下面的结果</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">import numpy as np</span><br><span class="line"></span><br><span class="line">array = np.random.random((3, 5))</span><br><span class="line"></span><br><span class="line">print(np.sum(array, axis=0))  </span><br><span class="line">print(np.sum(array, axis=1))  </span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt;[1.61948631 1.11130637 1.66794932 1.20041938 1.24456878]</span><br><span class="line">&gt;&gt;&gt;[1.97046523 3.43930555 1.43395938]</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>三维数组</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">array_3 = np.random.randint(0, 5, [2, 3, 2])</span><br><span class="line"></span><br><span class="line">print(np.sum(array_3, axis=0).shape)  </span><br><span class="line">print(np.sum(array_3, axis=1).shape)  </span><br><span class="line">print(np.sum(array_3, axis=2).shape)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>三维数组的三个维度，axis=0输出的就是剩下两个维度的结果。同理一样</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt;(3, 2)</span><br><span class="line">&gt;&gt;&gt;(2, 2)</span><br><span class="line">&gt;&gt;&gt;(2, 3)</span><br></pre></td></tr></table></figure>
+<p>axis的分析并不难，只是不是通常所记忆的索引问题，所以每次用axis的时候一定要想一想上面的那个图。记住0和1的方向指引，熟能生巧。</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
     
       
 
@@ -672,7 +863,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -689,7 +880,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">1</span>
+                      
+                    
+                    <span class="site-state-item-count">2</span>
                     <span class="site-state-item-name">tags</span>
                   
                 </div>
@@ -760,7 +953,7 @@
 
 
 
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Pisces</a> v6.0.5</div>
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Muse</a> v6.0.5</div>
 
 
 
@@ -849,13 +1042,6 @@
 
   
   
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=6.0.5"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.0.5"></script>
-
-
 
   
 
